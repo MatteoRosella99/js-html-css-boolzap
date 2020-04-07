@@ -1,0 +1,184 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d4dbdb;
+  height: 100%;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Open Sans', sans-serif;
+}
+header{
+  height: 12vh;
+  width: 100%;
+  background-color: #009688;
+}
+img{
+  height: 60px;
+  border-radius: 50%;
+}
+ul{
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0;
+}
+main{
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  left: 8%;
+  width: 84%;
+  height: 94%;
+  min-width: 1100px;
+
+}
+h3{
+  margin: 0;
+}
+h5{
+  margin: 0;
+  font-size: 17px;
+}
+p{
+  margin: 0;
+}
+.attualecontatto{
+  height: 75px;
+  background-color: white;
+  border-top: 1px solid #e6e6e6;
+  padding-left: 10px;
+}
+.attualecontatto img{
+  padding-top: 4px;
+}
+.attualescritte{
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.contatti{
+  padding-top: 0;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  float: left;
+  background-color: white;
+}
+.icons{
+  float: right;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+.icons > a > i{
+  font-size: 22px;
+  padding-left: 15px;
+  color: #d2d6d6;
+}
+.icons > a > i:hover{
+  color: #333333;
+}
+.center{
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-image:url(img/Sfondo.jpg);
+}
+.profilo > img{
+  margin-left: 10px;
+  margin-top: 4px;
+  float: left;
+}
+.utente{
+  height: 70px;
+  border-top: 0.1px solid #e6e6e6;
+  padding-top: 5px;
+}
+.persona{
+  padding-left: 10px;
+}
+.persona:hover{
+  cursor: pointer;
+  background-color: #ebebeb;
+}
+.ricerca{
+  border-top: 0.1px solid #e6e6e6;
+}
+.ricerca ul{
+  padding-left: 20px;
+  margin-top: 15px;
+}
+.ricerca ul li{
+  display: inline-block;
+}
+.ricerca ul li input{
+  width: 240px;
+  border: none;
+  font-size: 18px;
+  padding: 1px 3px;
+}
+.persona img, .text{
+  display: inline-block;
+  vertical-align: middle;
+}
+.nottext{
+  padding-left: 8px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+.text > p{
+  color: grey;
+  padding-top: 3px;
+}
+.notifiche{
+  background-color: #9de1fe;
+}
+.notifiche svg{
+  height: 48px;
+  color: white;
+  padding-left: 8px;
+  padding-top: 10px;
+  float: left;
+}
+.inviomessaggio{
+  position: fixed;
+  bottom: 3%;
+  background-color: #ebebeb;
+  width: 58.8%;
+  min-width: 770px;
+  height: 50px;
+}
+.inviol , .invioc , .invior{
+  float: left;
+}
+.inviol , .invior{
+  width: 5%;
+}
+.invioc{
+  width: 90%;
+}
+.inviol a i, .invior a i{
+  margin-left: 17px;
+  margin-top: 12px;
+  font-size: 22px;
+  color: grey;
+}
+.inviol a i:hover, .invior a i:hover{
+  color: #333333
+}
+.invioc input{
+  width: 99%;
+  margin: auto;
+  padding: 4px 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 150px;
+  border: 1px solid #ebebeb;
+}
+
+.none{
+  display: none;
+}
+.attivo{
+  display: active;
+}

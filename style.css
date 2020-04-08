@@ -33,6 +33,7 @@ main{
 }
 h3{
   margin: 0;
+  padding: 0;
 }
 h5{
   margin: 0;
@@ -56,6 +57,10 @@ p{
 }
 .contatti{
   padding-top: 0;
+}
+.contatti > ul{
+  overflow: auto;
+  max-height: 64vh;
 }
 .left{
   display: flex;
@@ -90,12 +95,19 @@ p{
   float: left;
 }
 .utente{
-  height: 70px;
+  min-height: 70px;
   border-top: 0.1px solid #e6e6e6;
   padding-top: 5px;
 }
 .persona{
   padding-left: 10px;
+}
+.personadue{
+  padding-left: 10px;
+}
+.personadue img, .text{
+  display: inline-block;
+  vertical-align: middle;
 }
 .persona:hover{
   cursor: pointer;
@@ -141,10 +153,10 @@ p{
   float: left;
 }
 .inviomessaggio{
-  position: fixed;
-  bottom: 3%;
+  position: absolute;
+  bottom: 0%;
   background-color: #ebebeb;
-  width: 58.8%;
+  width: 70%;
   min-width: 770px;
   height: 50px;
 }
@@ -158,7 +170,7 @@ p{
   width: 90%;
 }
 .inviol a i, .invior a i{
-  margin-left: 17px;
+  margin-left: 30%;
   margin-top: 12px;
   font-size: 22px;
   color: grey;
@@ -180,5 +192,37 @@ p{
   display: none;
 }
 .attivo{
-  display: active;
+  display: block;
+}
+.chat{
+  padding: 40px;
+  overflow: auto;
+  max-height: 64vh;
+}
+.pcmsg{
+  background-color: white;
+  text-align: left;
+  width: 150px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.chatmsg{
+  background-color: #dcf8c6;
+  text-align: right;
+  width: 150px;
+  margin-left: 79%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.msgtime{
+  font-size: 12px;
+}
+
+.search{
+  padding-right: 15px;
+}
+.search:hover{
+  cursor: pointer;
 }

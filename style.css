@@ -41,7 +41,10 @@ main{
 p{
   margin: 0;
 }
-
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
 /* CLASSI */
 /* Attuale */
 .attualecontatto{

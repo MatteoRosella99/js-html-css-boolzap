@@ -1,3 +1,7 @@
+/*FOGLIO DI STILE CSS ORDINATO ALFABETICAMENTE
+  PER TAG - CLASSI - ID*/
+
+/* TAGS */
 body{
   margin: 0;
   padding: 0;
@@ -7,6 +11,14 @@ body{
   font-family: 'Roboto Slab', serif;
   font-family: 'Open Sans', sans-serif;
 }
+h3{
+  margin: 0;
+  padding: 0;
+}
+h5{
+  margin: 0;
+  font-size: 17px;
+}
 header{
   height: 12vh;
   width: 100%;
@@ -15,11 +27,6 @@ header{
 img{
   height: 60px;
   border-radius: 50%;
-}
-ul{
-  list-style-type: none;
-  padding-left: 0px;
-  margin-top: 0;
 }
 main{
   position: absolute;
@@ -31,17 +38,12 @@ main{
   min-width: 1100px;
 
 }
-h3{
-  margin: 0;
-  padding: 0;
-}
-h5{
-  margin: 0;
-  font-size: 17px;
-}
 p{
   margin: 0;
 }
+
+/* CLASSI */
+/* Attuale */
 .attualecontatto{
   height: 75px;
   background-color: white;
@@ -55,6 +57,32 @@ p{
   padding-top: 15px;
   padding-left: 15px;
 }
+/* Chat */
+.chat{
+  padding: 40px;
+  overflow: auto;
+  max-height: 70vh;
+}
+.chatattivo{
+  display: block;
+}
+.chatmsg{
+  background-color: #dcf8c6;
+  text-align: right;
+  width: 150px;
+  margin-left: 79%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+/* Center */
+.center{
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-image:url(img/Sfondo.jpg);
+}
+/* Contatti */
 .contatti{
   padding-top: 0;
 }
@@ -62,14 +90,7 @@ p{
   overflow: auto;
   max-height: 64vh;
 }
-.left{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 30%;
-  float: left;
-  background-color: white;
-}
+/* Icons */
 .icons{
   float: right;
   padding-top: 25px;
@@ -83,75 +104,7 @@ p{
 .icons > a > i:hover{
   color: #333333;
 }
-.center{
-  float: left;
-  width: 70%;
-  height: 100%;
-  background-image:url(img/Sfondo.jpg);
-}
-.profilo > img{
-  margin-left: 10px;
-  margin-top: 4px;
-  float: left;
-}
-.utente{
-  min-height: 70px;
-  border-top: 0.1px solid #e6e6e6;
-  padding-top: 5px;
-}
-.persona{
-  padding-left: 10px;
-}
-.personadue{
-  padding-left: 10px;
-}
-.personadue img, .text{
-  display: inline-block;
-  vertical-align: middle;
-}
-.persona:hover{
-  cursor: pointer;
-  background-color: #ebebeb;
-}
-.ricerca{
-  border-top: 0.1px solid #e6e6e6;
-}
-.ricerca ul{
-  padding-left: 20px;
-  margin-top: 15px;
-}
-.ricerca ul li{
-  display: inline-block;
-}
-.ricerca ul li input{
-  width: 240px;
-  border: none;
-  font-size: 18px;
-  padding: 1px 3px;
-}
-.persona img, .text{
-  display: inline-block;
-  vertical-align: middle;
-}
-.nottext{
-  padding-left: 8px;
-  padding-top: 10px;
-  font-size: 13px;
-}
-.text > p{
-  color: grey;
-  padding-top: 3px;
-}
-.notifiche{
-  background-color: #9de1fe;
-}
-.notifiche svg{
-  height: 48px;
-  color: white;
-  padding-left: 8px;
-  padding-top: 10px;
-  float: left;
-}
+/* Invio */
 .inviomessaggio{
   position: absolute;
   bottom: 0%;
@@ -187,18 +140,36 @@ p{
   border-radius: 150px;
   border: 1px solid #ebebeb;
 }
-
-.none{
-  display: none;
+/* left */
+.left{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  float: left;
+  background-color: white;
 }
-.attivo{
-  display: block;
+/* msg */
+.msgtime{
+  font-size: 12px;
 }
-.chat{
-  padding: 40px;
-  overflow: auto;
-  max-height: 70vh;
+/* notifiche */
+.notifiche{
+  background-color: #9de1fe;
 }
+.notifiche svg{
+  height: 48px;
+  color: white;
+  padding-left: 8px;
+  padding-top: 10px;
+  float: left;
+}
+.nottext{
+  padding-left: 8px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+/* pc */
 .pcmsg{
   background-color: white;
   text-align: left;
@@ -207,22 +178,72 @@ p{
   margin-bottom: 15px;
   border-radius: 5px;
 }
-.chatmsg{
-  background-color: #dcf8c6;
-  text-align: right;
-  width: 150px;
-  margin-left: 79%;
-  padding: 8px 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+/* profilo */
+.profilo > img{
+  margin-left: 10px;
+  margin-top: 4px;
+  float: left;
 }
-.msgtime{
-  font-size: 12px;
+/* persona */
+.persona{
+  padding-left: 10px;
 }
-
+.persona:hover{
+  cursor: pointer;
+  background-color: #ebebeb;
+}
+.persona img, .text{
+  display: inline-block;
+  vertical-align: middle;
+}
+.personadue{
+  padding-left: 10px;
+}
+.personadue img, .text{
+  display: inline-block;
+  vertical-align: middle;
+}
+/* ricerca */
+.ricerca{
+  border-top: 0.1px solid #e6e6e6;
+}
+.ricerca ul{
+  padding-left: 20px;
+  margin-top: 15px;
+}
+.ricerca ul li{
+  display: inline-block;
+}
+.ricerca ul li input{
+  width: 240px;
+  border: none;
+  font-size: 18px;
+  padding: 1px 3px;
+}
+/* search */
 .search{
   padding-right: 15px;
 }
 .search:hover{
   cursor: pointer;
+}
+/* text */
+.text > p{
+  color: grey;
+  padding-top: 3px;
+}
+/* utente */
+.utente{
+  min-height: 70px;
+  border-top: 0.1px solid #e6e6e6;
+  padding-top: 5px;
+}
+
+
+/* Classi per display attivo - spento */
+.none{
+  display: none;
+}
+.attivo{
+  display: block;
 }

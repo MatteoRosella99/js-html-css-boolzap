@@ -1,4 +1,10 @@
-//JAVASCRIPT
+
+//Variabili
+var input = $('.msg');
+var risposta = $('.risp');
+var ricontact = $('.ricontact');
+var z = 0;
+
 
 $('.tlg').click(message)
 
@@ -84,7 +90,6 @@ $('.uotto').click(
     $('.cotto').removeClass('none')
   }
 )
-
 
 //Funzione per cambio icona da microfono a invio del messaggio
 $('.msg').click(

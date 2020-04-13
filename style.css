@@ -79,6 +79,9 @@ ul{
   margin-bottom: 15px;
   border-radius: 5px;
 }
+.chatmsg > span > i{
+  float: left;
+}
 /* Center */
 .center{
   float: left;
@@ -93,6 +96,18 @@ ul{
 .contatti > ul{
   overflow: auto;
   max-height: 64vh;
+}
+/* Eliminazione */
+.eliminazione{
+  text-align: left;
+  background-color: white;
+}
+.elimsg , .infomsg{
+  padding: 4px 8px;
+}
+.elimsg:hover , .infomsg:hover{
+  background-color: grey;
+  cursor: pointer;
 }
 /* Icons */
 .icons{
@@ -181,6 +196,12 @@ ul{
   padding: 8px 12px;
   margin-bottom: 15px;
   border-radius: 5px;
+}
+.pcmsg > span > i{
+  float: right;
+}
+.pcmsg:hover span > i , .chatmsg:hover span > i{
+  cursor: pointer;
 }
 /* profilo */
 .profilo > img{

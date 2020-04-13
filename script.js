@@ -13,6 +13,9 @@ $("body").click(
   function() {
     $('.mic').removeClass('none');
     $('.tlg').addClass('none');
+    $('.eliminazione').addClass('none');
+    $('.motdue').addClass('none');
+    $('.mot').removeClass('none')
 });
 
 
@@ -131,13 +134,52 @@ $('.persona').click(
 
 //Funzione chat con risposta automatica del pc
 function message(){
+  var data = new Date()
+  minuti = data.getMinutes();
+  ora = data.getHours();
   $('.mic').removeClass('none');
   $('.tlg').addClass('none');
   var text = input.val();//Acquisizione frase da scrivere in chat
-  $('.chatattivo').append('<div class="chatmsg"><span class="msgsend">' + text + '</span><br><span class="msgtime">23:44</span></div>');
+  $('.chatattivo').append('<div class="chatmsg"><span class="msgsend">' + text + '</span><br><span class= "mot"><i class="fas fa-angle-down"></i></span><span class= "motdue none"><i class="fas fa-angle-up"></i></span><span class="msgtime">' + ora + ':' + minuti + '</span></div>');
   $('.msg').val('');
   setTimeout(function() { //Attesa di un secondo prima dell'inserimenti di un messaggio automatico
-    $('.chatattivo').append('<div class="pcmsg"><span class="msgsend">Non mi interessa!</span><br><span class="msgtime">23:44</span></div>')
+    $('.chatattivo').append('<div class="pcmsg"><span class="msgsend">Non mi interessa!</span><br><span class="msgtime">' + ora + ':' + minuti + '</span><span class= "mot"><i class="fas fa-angle-down"></i></span></span><span class= "motdue none"><i class="fas fa-angle-up"></i></span></div>')
     z = z + 1;
   }, 1000);
 }
+
+
+
+//FUNZIONI PER ELIMINARE I MESSAGGI
+
+//Apparizione sezione elimina e info
+$('.chatgroup').on("click" , ".chatattivo .chatmsg .mot i" ,
+  function(magica){
+    $(this).closest('.chatmsg').append('<div class="eliminazione"><div class="elimsg"><span>Elimina</span></div><div class="infomsg"><span>Info</span></div></div>');
+    $(this).closest('span').addClass('none');
+    $(this).closest('.chatmsg').find('.motdue').removeClass('none');
+    magica.stopPropagation();
+  }
+)
+$('.chatgroup').on("click" , ".chatattivo .pcmsg .mot i" ,
+  function(magicadue){
+    $(this).closest('.pcmsg').append('<div class="eliminazione"><div class="elimsg"><span>Elimina</span></div><div class="infomsg"><span>Info</span></div></div>');
+    $(this).closest('span').addClass('none');
+    $(this).closest('.pcmsg').find('.motdue').removeClass('none');
+    magicadue.stopPropagation();
+  }
+)
+
+//Cancellazione messaggio pc
+$('.chatgroup').on("click" , ".chatattivo .pcmsg .eliminazione" ,
+  function(){
+    $(this).closest('.pcmsg').addClass('none');
+  }
+)
+
+//Cancellazione messaggio utente
+$('.chatgroup').on("click" , ".chatattivo .chatmsg .eliminazione" ,
+  function(){
+    $(this).closest('.chatmsg').addClass('none');
+  }
+)
